@@ -1,1 +1,1 @@
-web: gunicorn vagrant.app:app
+web: gunicorn vagrant:app
