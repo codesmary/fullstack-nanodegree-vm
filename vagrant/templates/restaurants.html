@@ -1,0 +1,97 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href={{ url_for('static', filename='styles.css')}}>
+</head>
+<body>
+
+<div id="cover">
+    <img src="../static/cover.jpg"/>
+
+    <div id="rosemary">
+        <p>Rosemary</p>
+    </div>
+
+    <div id="banner">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#restaurants">Restaurants</a></li>
+    </ul>    
+    </div>
+
+    <div id="title">
+        <h2>Premium</h2>
+        <h1><i>Restaurant</br>Manager</i></h1>
+    </div>
+</div>
+
+<div id="about-us">
+    <div id="title">
+        <h3>What We Can Offer</h3>
+        <p>from our hearts</p>
+    </div>
+
+    <ul>
+        <li>
+            <img src="../static/about-us-1.jpg"/>
+            <h3>Always Fresh</h3>
+            <p>We ensure ingredients are<br>prepared daily in-house by<br>top quality chefs.</p>
+        </li>
+        <li>
+            <img src="../static/about-us-2.jpg"/>
+            <h3>Locally Sourced</h3>
+            <p>Our restaurants source<br>ingredients from the<br>surrounding Austin, TX area<br>weekly.</p>
+        </li>
+        <li>
+            <img src="../static/about-us-3.jpg"/>
+            <h3>Rosemary Guaranteed</h3>
+            <p>Our restaurants deliver top<br>quality service everytime or<br>your money back.</p>
+        </li>
+    </ul>
+</div>
+
+<div id="restaurants">
+    <img src="../static/menu-2.jpg"/>
+    <div id="rectangle"></div>
+    <div id="fish">
+        <img src="../static/fish.png"/>
+    </div>
+    <h2>Dine At Only The Best</h2>
+    <p>hand selected</p>
+
+    <div id="new-restaurant">
+        <a href="{{url_for('newRestaurant') }}"><h3>Create a New Restaurant</h3></a>
+    </div>
+    <div id="names">
+        {% for r in restaurants %}
+            <h3><a href="{{url_for('showMenu', restaurant_id=r.id)}}">{{r.name}}</a></h3>
+            <br>
+            <div id="edit">
+                <a href="{{url_for('editRestaurant', restaurant_id=r.id) }}">Edit</a>
+            </div>
+            <div id="delete">
+                <a href="{{url_for('deleteRestaurant', restaurant_id=r.id) }}">Delete</a>
+                <br><br><br><br>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+
+<div id="footer">
+    <div id="rectangle"></div>
+    <div id="rosemary">
+        <p>Rosemary</p>
+    </div>
+
+    <div id="built">
+        <p>Theme built by</p>
+    </div>
+
+    <div id="rosemary-fortanely">
+        <p><b>Rosemary Fortanely</b></p>
+    </div>
+</div>
+
+</body>
+</html>

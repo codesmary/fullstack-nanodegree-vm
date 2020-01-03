@@ -1,0 +1,57 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href={{ url_for('static', filename='styles.css')}}>
+</head>
+<body>
+    <div id="menu">
+            <img src="/static/menu-1.jpg"/>
+            <div id="rectangle"></div>
+            <div id="fish">
+                <img src="/static/fish.png"/>
+            </div>
+            <h2>Enjoy The Best Cuisine</h2>
+            <p>on this planet</p>
+        
+            <div id="new-item">
+                <a href="{{ url_for('newMenuItem', restaurant_id=restaurant_id)}}"><h3>Create a New Menu Item</h3></a>
+            </div>
+            <div id="names">
+                {% for m in menu_items %}
+                    <h3>{{m.name}}</h3>
+                    <br><br>
+                    <div id="edit">
+                        <a href="{{ url_for('editMenuItem', restaurant_id=m.restaurant_id, menu_id=m.id)}}">Edit</a>
+                    </div>
+                    <div id="delete">
+                        <a href="{{ url_for('deleteMenuItem', restaurant_id=m.restaurant_id, menu_id=m.id)}}">Delete</a>
+                    </div>
+                    <div id="price">
+                        {{m.price}}
+                        <br><br>
+                    </div>
+                    <hr>
+                    <div id="description">
+                        {{m.description}}
+                    </div>
+                    <br><br><br><br>
+            
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="rectangle"></div>
+            <div id="rosemary">
+                <p>Rosemary</p>
+            </div>
+        
+            <div id="built">
+                <p>Theme built by</p>
+            </div>
+        
+            <div id="rosemary-fortanely">
+                <p><b>Rosemary Fortanely</b></p>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel=stylesheet type=text/css href={{ url_for('static', filename='styles.css')}}>
+</head>
+<body>
+    <div id="cover-edit">
+        <img src="/static/cover-edit-restaurant.jpg"/>
+        <div id="rectangle"></div>
+        <h1>Change Menu Item Name</h1>
+
+        <form action="{{ url_for('editMenuItem', restaurant_id=menu_item.restaurant_id, menu_id=menu_item.id)}}" method = 'POST'>
+            <div id="input">
+        <input type='text' size='30' name='name' placeholder="{{menu_item.name}}">
+        </div>
+        <div id="submit">
+            <input type='submit' value='SUBMIT'>
+        </div>
+        </form>
+    </div>
+
+    <div id="footer">
+        <div id="rectangle"></div>
+        <div id="rosemary">
+            <p>Rosemary</p>
+        </div>
+    
+        <div id="built">
+            <p>Theme built by</p>
+        </div>
+    
+        <div id="rosemary-fortanely">
+            <p><b>Rosemary Fortanely</b></p>
+        </div>
+    </div>
+</body>
+</html>
