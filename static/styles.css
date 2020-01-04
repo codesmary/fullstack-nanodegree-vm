@@ -13,21 +13,18 @@ body{
     height: auto;
 }
 
-#cover #rosemary{
-    color: #47525E;
-    font-size: 2em;
-    font-family: 'Grand Hotel';
-}
-
 #cover{
     position: relative;
 }
 
 #cover #rosemary{
-    font-size: 1.5em;
     position: absolute;
     top: 0px;
     left: 20px;
+    color: #47525E;
+    font-size: 2.5vw;
+    font-family: 'Grand Hotel';
+    line-height: 1.5vh;
 }
 
 #cover #banner{
@@ -46,6 +43,8 @@ body{
     text-decoration: none;
     color: #47525E;
     font-family: 'Lato';
+    font-size: 1.3vw;
+    line-height: 1vh;
 }
 
 #cover #title{
@@ -57,7 +56,7 @@ body{
 
 #cover #title h2{
     color: #D46F8C;
-    font-size: 2.2em;
+    font-size: 3.5vw;
     font-family: 'Grand Hotel';
     font-weight: normal;
     transform: translate(-50%, -230%);
@@ -65,7 +64,7 @@ body{
 
 #cover #title h1{
     color: #47525E;
-    font-size: 4em;
+    font-size: 6vw;
     font-family: 'Abril Fatface';
     font-weight: normal;
     line-height: 0.8em;
@@ -79,9 +78,9 @@ body{
 }
 
 #about-us #title h3{
-    padding-top: 70px;
+    padding-top: 10vh;
     color: #47525E;
-    font-size: 2em;
+    font-size: 3.5vw;
     font-family: 'Abril Fatface';
     font-weight: normal;
     line-height: 0.05em;
@@ -97,6 +96,7 @@ body{
     font-weight: normal;
     color: #A1A5A9;
     padding-bottom: 70px;
+    font-size: 1.7vw;
 }
 
 #about-us #title br{
@@ -125,6 +125,7 @@ body{
     font-family: 'Abril Fatface';
     font-weight: normal;
     color: #47525E;
+    font-size: 2vw;
 }
 
 #about-us li p{
@@ -132,69 +133,74 @@ body{
     font-weight: lighter;
     color: #A1A5A9;
     padding-bottom: 70px;
+    font-size: 1.7vw;
 }
 
-/*Restaurants*/
+/* Restaurants, some Menu */
 
-#restaurants{
+#restaurants, #menu{
     position: relative;
 }
 
-#restaurants img{
+#restaurants img, #menu img{
     width: 100%;
 }
 
-#restaurants #rectangle{
+#restaurants #rectangle,
+#menu #rectangle{
     position: absolute;
     height: 1200px;
     width: 90%;
     background-color: white;
-    top: 140px;
+    top: 10%;/*top: 140px;*/
     left: 50%;
     transform: translate(-50%);
     border-radius: 56px;
 }
 
-#restaurants #fish img{
+#restaurants #fish img,
+#menu #fish img{
     position: absolute;
     width: 10%;
-    top: 200px;
+    top: 14%;/*200px;*/
     left: 50%;
     transform: translate(-50%);
 }
 
-#restaurants h2{
+#restaurants h2, #menu h2{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 260px;
-    font-size: 2em;
+    top: 18%;/*top: 260px;*/
+    font-size: 3.5vw;
     color: #47525E;
 }
 
-#restaurants p{
+#restaurants p, #menu p{
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 320px;
+    top: 22%;/*320px;*/
     font-family: 'Josefin Sans';
     font-weight: lighter;
     color: #A1A5A9;
+    font-size: 1.7vw;
 }
 
-#restaurants #new-restaurant a{
+#restaurants #new-restaurant a,
+#menu #new-item a{
     position: absolute;
     text-decoration: none;
     color: #F3882D;
     font-family: 'Abril Fatface';
     font-weight: lighter;
-    top: 370px;
-    left: 100px;
+    top: 26%;/*370px;*/
+    left: 12vw; /*100px*/
 }
 
 #restaurants #names{
     position: absolute;
-    top: 440px;
+    top: 32%;/*440px;*/
 }
 
 #restaurants #names h3{
@@ -202,7 +208,7 @@ body{
     position: absolute;
     font-family: 'Lato';
     font-weight: lighter;
-    left: 100px;
+    left: 12vw;/*100px;*/
 }
 
 #restaurants #names h3 a{
@@ -210,12 +216,10 @@ body{
     text-decoration: none;
 }
 
-/*TODO fix*/
-
 #restaurants #names #edit a{
     position: absolute;
     text-decoration: none;
-    left: 675px;
+    left: 70vw;/*675px;*/
     color: #8190A5;
     font-family: 'Josefin Sans';
     font-weight: lighter;
@@ -224,13 +228,13 @@ body{
 #restaurants #names #delete a{
     position: absolute;
     text-decoration: none;
-    left: 750px;
+    left: 77vw;/*750px;*/
     color: #8190A5;
     font-family: 'Josefin Sans';
     font-weight: lighter;
 }
 
-/*Footer*/
+/* Footer */
 
 #footer{
     position: relative;
@@ -244,17 +248,21 @@ body{
 
 #footer #rosemary{
     position: absolute;
-    top: 30px;
+    top: 17%;
     font-family: 'Grand Hotel';
     color: white;
-    font-size: 2.5em;
+    font-size: 4vw;
     left: 50%;
     transform: translate(-50%);
 }
 
+#footer #built, #footer #rosemary-fortanely{
+    bottom: 8vh;
+    font-size: 1.7vw;
+}
+
 #footer #built{
     position: absolute;
-    top: 120px;
     color: #BEBEBE;
     left: 43%;
     transform: translate(-50%);
@@ -264,7 +272,6 @@ body{
 
 #footer #rosemary-fortanely{
     position: absolute;
-    top: 120px;
     color: white;
     left: 57%;
     transform: translate(-50%);
@@ -272,134 +279,79 @@ body{
     font-weight: normal;
 }
 
-/*Create a New Restaurant*/
+/* Create a New Restaurant */
+/* Delete a Restaurant */
+/* Edit a Restaurant */
 
-#cover-new{
+#cover-new, 
+#cover-delete, 
+#cover-edit{
     position: relative;
-}
-
-#cover-new img{
     width: 100%;
 }
 
-#cover-new #rectangle{
-    position: absolute;
-    height: 70%;
-    width: 90%;
-    background-color: white;
-    top: 140px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 56px;
-}
-
-#cover-new h1{
-    position: absolute;
-    top: 210px;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: 'Abril Fatface';
-    color: #47525E;
-    font-size: 3em;
-    white-space: nowrap;
-    font-weight: lighter;
-}
-
-#cover-new form{
-    position: absolute;
-    left: 100px;
-    top: 400px;
-}
-
-#cover-new #input input{
-    position: absolute;
-    top: -10px;
-    left: 80px;
-    border: none;
-    font-size: 1em;
-    font-family: 'Lato';
-    font-weight: lighter;
-    font-style: italic;
-}
-
-/*TODO fix*/
-
-#cover-new #submit input{
-    position: absolute;
-    top: 75px;
-    left: 375px;
-    border: none;
-    color: #47525E;
-    font-family: 'Lato';
-    background-color: white;
-    font-weight: bolder;
-    border: none;
-}
-
-#cover-new hr{
-    position: absolute;
-    width: 700px;
-    color: #969FAA;
-    left: 60px;
-    top: 25px;
-}
-
-/*Edit a Restaurant*/
-
-#cover-edit{
-    position: relative;
-}
-
+#cover-new img, 
+#cover-delete img, 
 #cover-edit img{
     width: 100%;
 }
 
+#cover-new #rectangle, 
+#cover-delete #rectangle,
 #cover-edit #rectangle{
     position: absolute;
     height: 70%;
     width: 90%;
     background-color: white;
-    top: 140px;
+    top: 20%;/*140px;*/
     left: 50%;
     transform: translate(-50%);
     border-radius: 56px;
 }
 
+#cover-new h1, 
+#cover-delete h1,
 #cover-edit h1{
     position: absolute;
-    top: 210px;
+    top: 30%;/*210px;*/
     left: 50%;
     transform: translate(-50%);
     font-family: 'Abril Fatface';
     color: #47525E;
-    font-size: 3em;
+    font-size: 4.3vw;/*3em;*/
     white-space: nowrap;
     font-weight: lighter;
 }
 
+#cover-new form, 
+#cover-delete form,
 #cover-edit form{
     position: absolute;
     left: 100px;
-    top: 400px;
+    top: 60%;/*400px;*/
 }
 
+#cover-new #input input, 
+#cover-delete p,
 #cover-edit #input input{
     position: absolute;
-    top: -10px;
-    left: 80px;
+    top: -1vh;/*-10px;*/
+    left: 8vw;/*80px;*/
     border: none;
-    font-size: 1em;
+    font-size: 1.5vw;/*1em;*/
     font-family: 'Lato';
     font-weight: lighter;
     font-style: italic;
+    white-space: nowrap;
 }
 
-/*TODO fix*/
-
+#cover-new #submit input, 
+#cover-delete #submit input,
 #cover-edit #submit input{
     position: absolute;
-    top: 75px;
-    left: 375px;
+    top: 10vh;/*75px;*/
+    /*left: 375px;*//*35vw;*/
+    left: calc(50vw - 175px);
     border: none;
     color: #47525E;
     font-family: 'Lato';
@@ -408,136 +360,24 @@ body{
     border: none;
 }
 
-/*Delete a Restaurant*/
-
-#cover-delete{
-    position: relative;
-}
-
-#cover-delete img{
-    width: 100%;
-}
-
-#cover-delete #rectangle{
+#cover-new hr, 
+#cover-edit hr{
     position: absolute;
-    height: 70%;
-    width: 90%;
-    background-color: white;
-    top: 140px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 56px;
+    width: 65vw;/*700px;*/
+    color: #969FAA;
+    left: 6vw;/*60px;*/
+    top: 3vh;/*25px;*/
 }
 
-#cover-delete h1{
-    position: absolute;
-    top: 210px;
-    left: 50%;
-    transform: translate(-50%);
-    font-family: 'Abril Fatface';
-    color: #47525E;
-    font-size: 3em;
-    white-space: nowrap;
-    font-weight: lighter;
-}
-
-#cover-delete form{
-    position: absolute;
-    left: 100px;
-    top: 400px;
-}
-
-#cover-delete p{
-    position: absolute;
-    top: -10px;
-    left: 80px;
-    border: none;
-    font-size: 1em;
-    font-family: 'Lato';
-    font-weight: lighter;
-    font-style: italic;
-    white-space: nowrap;
-}
-
-/*TODO fix*/
-
-#cover-delete #submit input{
-    position: absolute;
-    top: 75px;
-    left: 375px;
-    border: none;
-    color: #47525E;
-    font-family: 'Lato';
-    background-color: white;
-    font-weight: bolder;
-    border: none;
-}
-
-/*Menu*/
-
-#menu{
-    position: relative;
-}
-
-#menu img{
-    width: 100%;
-}
-
-#menu #rectangle{
-    position: absolute;
-    height: 1200px;
-    width: 90%;
-    background-color: white;
-    top: 140px;
-    left: 50%;
-    transform: translate(-50%);
-    border-radius: 56px;
-}
-
-#menu #fish img{
-    position: absolute;
-    width: 10%;
-    top: 200px;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-#menu h2{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 260px;
-    font-size: 2em;
-    color: #47525E;
-}
-
-#menu p{
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 320px;
-    font-family: 'Josefin Sans';
-    font-weight: lighter;
-    color: #A1A5A9;
-}
-
-#menu #new-item a{
-    position: absolute;
-    text-decoration: none;
-    color: #F3882D;
-    font-family: 'Abril Fatface';
-    font-weight: lighter;
-    top: 370px;
-    left: 100px;
-}
+/* Menu */
 
 #menu #names{
     position: absolute;
-    top: 440px;
+    top: 30%;/*440px;*/
     column-count: 2;
-    column-width: 200px;
-    column-gap: 170px;
-    left: 100px;
+    column-width: 17vw;/*200px;*/
+    column-gap: 12vw;/*170px;*/
+    left: 14vw;/*100px;*/
 }
 
 #menu #names h3{
@@ -546,54 +386,48 @@ body{
     font-family: 'Lato';
     font-weight: lighter;
     color: #47525E;
-    font-size: 1.1em;
+    font-size: 1.7vw;/*1.1em;*/
     overflow: auto;
-    width: 300px;
+    width: 28vw;/*300px;*/
 }
 
-/*TODO fix*/
-
-#menu #names #edit a{
+#menu #names #edit a, #menu #names #delete a{
     position: absolute;
     text-decoration: none;
     color: #8190A5;
     font-family: 'Josefin Sans';
     font-weight: lighter;
-    margin-left: 20px;
-    margin-top: 30px;
-    font-size: .8em;
+    margin-top: 4%;/*30px;*/
+    font-size: 1.2vw;/*.8em;*/
+}
+
+#menu #names #edit a{
+    margin-left: 3%;/*20px;*/
 }
 
 #menu #names #delete a{
-    position: absolute;
-    text-decoration: none;
-    color: #8190A5;
-    font-family: 'Josefin Sans';
-    font-weight: lighter;
-    margin-left: 60px;
-    margin-top: 30px;
-    font-size: .8em;
+    margin-left: 9%;/*60px;*/
 }
 
 #menu #names #price{
     position: absolute;
-    margin-left: 250px;
+    margin-left: 33%;/*250px;*/
     font-family: 'Lato';
     color: #47525E;
-    margin-top: 26px
+    margin-top: 3%;/*26px*/
 }
 
 #menu #names #description{
     position: absolute;
     font-family: 'Lato';
     color: #8190A5;
-    margin-top: 10px;
-    font-size: 0.9em;
+    margin-top: 1vh;/*10px;*/
+    font-size: 1.4vw;/*0.9em;*/
     font-style: italic;
-    width: 275px;
-    line-height: 30px;
+    width: 26vw;/*275px;*/
+    line-height: 3vh;/*30px;*/
     font-weight: lighter;
-    height: 70px;
+    height: 7vh;/*70px;*/
     overflow: auto;
 }
 
