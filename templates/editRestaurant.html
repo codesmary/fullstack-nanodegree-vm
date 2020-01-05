@@ -4,7 +4,16 @@
 </head>
 <body>
     <div id="cover-edit">
-        <img src="/static/cover-edit-restaurant.jpg"/>
+        <picture>
+            <source 
+                media="(min-width: 750px)"
+                srcset="../static/cover-edit-restaurant.jpg">
+            <source 
+                media="(min-width: 200)"
+                srcset="../static/cover-edit-restaurant-mobile.jpg">
+            <img src="../static/cover-edit-restaurant.jpg">
+        </picture>
+
         <div id="rectangle"></div>
         <h1>Change Restaurant Name</h1>
 
